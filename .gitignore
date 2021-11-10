@@ -1,11 +1,19 @@
+# Build path
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
+dependency.txt
 dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+
+# Path for datas
+datas/
+log/
+*.ddl
+!src/**/datas
+
+# Visual Studio Code files
+.vscode/
+.factorypath
+.settings/
+.project
+.classpath
+.apt_generated/
+.apt_generated_tests/
