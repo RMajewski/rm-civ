@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+  <Properties>
+    <Property name="DEV_FILE_NAME">log/dev.log</Property>
+    <Property name="LOG_PATTERN">%d{dd.MM.yyyy HH:mm:ss:SSS} %-5p [%t] %c: %m%n</Property>
+  </Properties>
+
+  <Appenders>
+    <Console name="stdout" target="SYSTEM_OUT">
+      <PatternLayout pattern="${LOG_PATTERN}" />
+    </Console>
+
+    <File name="devFile" fileName="${DEV_FILE_NAME}">
+      <PatternLayout pattern="${LOG_PATTERN}" />
+    </File>
+  </Appenders>
+
+  <Loggers>
+    <Root level="debug">
+      <AppenderRef ref="stdout" />
+      <AppenderRef ref="devFile" />
+    </Root>
+  </Loggers>
+</Configuration>

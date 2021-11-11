@@ -1,6 +1,7 @@
 package de.rene_majewski.java.civ.windows;
 
 import de.rene_majewski.java.civ.App;
+import de.rene_majewski.java.civ.config.VersionConfig;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -53,6 +54,7 @@ public class MainWindow extends Application {
    * @param args Parameters from the command line.
    */
   public static void main(String[] args) {
+    VersionConfig.getInstance().logVersion(MainWindow.class);
     launch(args);
   }
 }
